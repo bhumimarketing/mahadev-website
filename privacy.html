@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Privacy Policy | Bhumi Marketing</title>
+
+<link rel="icon" type="image/png" href="favicon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Privacy Policy of Bhumi Marketing covering data collection, usage, security, cookies and user rights.">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f7fb;
+    color:#333;
+}
+
+/* PAGE TITLE */
+.page-title{
+    padding:70px 20px 30px;
+    text-align:center;
+}
+.page-title h1{
+    font-size:38px;
+    color:#0d47a1;
+}
+
+/* CONTENT */
+.policy-box{
+    max-width:1000px;
+    margin:0 auto 80px;
+    background:#fff;
+    padding:45px;
+    border-radius:16px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.1);
+}
+.policy-box h2{
+    color:#0d47a1;
+    margin-top:32px;
+    margin-bottom:10px;
+    font-size:22px;
+}
+.policy-box p{
+    font-size:15px;
+    line-height:1.8;
+    margin-top:8px;
+}
+
+/* FOOTER */
+footer{
+    background:#222;
+    color:#fff;
+    text-align:center;
+    padding:16px;
+    font-size:14px;
+}
+
+@media(max-width:600px){
+    .page-title h1{font-size:28px}
+    .policy-box{padding:30px}
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER LOAD -->
+<div id="header"></div>
+<script>
+fetch("header.html")
+.then(r => r.text())
+.then(d => document.getElementById("header").innerHTML = d)
+.catch(()=>{
+ document.getElementById("header").innerHTML =
+ "<div style='background:#0d47a1;color:#fff;padding:15px;text-align:center;font-weight:bold'>Bhumi Marketing</div>";
+});
+</script>
+
+<!-- TITLE -->
+<section class="page-title">
+<h1>Privacy Policy</h1>
+</section>
+
+<!-- CONTENT -->
+<section class="policy-box">
+
+<p>
+Bhumi Marketing respects your privacy and is committed to protecting the
+personal information you share with us. This Privacy Policy explains how
+we collect, use, store, and safeguard your information.
+</p>
+
+<h2>Information We Collect</h2>
+<p>
+We may collect personal information including your name, email address,
+mobile number, company details, and any information submitted through our
+website forms, WhatsApp, email, or other communication channels.
+</p>
+
+<h2>How We Use Your Information</h2>
+<p>
+• To provide digital marketing, CRM, WhatsApp API, IVR, RCS, and automation services.<br>
+• To respond to inquiries, service requests, and customer support needs.<br>
+• To send service-related updates, alerts, and promotional communication (with consent).
+</p>
+
+<h2>Data Protection & Security</h2>
+<p>
+We use appropriate technical and organizational security measures to
+protect your personal data. We do not sell, rent, or trade your personal
+information to third parties, except where required by law.
+</p>
+
+<h2>Cookies & Tracking</h2>
+<p>
+Our website may use cookies and similar technologies to improve user
+experience, analyze traffic, and enhance our services. You may disable
+cookies through your browser settings if you prefer.
+</p>
+
+<h2>Third-Party Services</h2>
+<p>
+We may use third-party tools such as analytics, payment gateways, or
+messaging platforms to support our operations. These third parties have
+their own privacy policies governing the use of your data.
+</p>
+
+<h2>User Consent</h2>
+<p>
+By accessing or using our website and services, you consent to the
+collection and use of your information as described in this Privacy Policy.
+</p>
+
+<h2>Policy Updates</h2>
+<p>
+Bhumi Marketing reserves the right to update this Privacy Policy at any
+time. Any changes will be posted on this page with an updated effective date.
+</p>
+
+<h2>Contact Information</h2>
+<p>
+If you have any questions or concerns regarding this Privacy Policy, you
+may contact us at:
+<br><br>
+<strong>Email:</strong> bhumimarketing.info.gov@gmail.com<br>
+<strong>Mobile:</strong> +91 98877 00059
+</p>
+
+</section>
+
+<footer>
+© 2025 Bhumi Marketing | All Rights Reserved
+</footer>
+
+<!-- COMMON WHATSAPP CHATBOT LOAD -->
+<div id="chatbot"></div>
+<script>
+fetch("chatbot.html")
+.then(r => r.text())
+.then(d => document.getElementById("chatbot").innerHTML = d);
+</script>
+
+</body>
+</html>

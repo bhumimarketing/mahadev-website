@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Contact Us | Bhumi Marketing</title>
+
+<link rel="icon" type="image/png" href="favicon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Contact Bhumi Marketing for Digital Marketing, CRM, WhatsApp API and Automation Solutions.">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:Arial, Helvetica, sans-serif;
+  background:#ffffff;
+  color:#222;
+}
+
+/* MAIN WRAPPER */
+.contact-wrapper{
+  min-height:100vh;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  padding:80px 6%;
+  gap:40px;
+}
+
+/* LEFT CONTENT */
+.contact-left h1{
+  font-size:58px;
+  line-height:1.1;
+  margin-bottom:20px;
+}
+.contact-left h1 span{
+  font-style:italic;
+  font-weight:400;
+}
+.contact-left p{
+  font-size:16px;
+  max-width:420px;
+  margin-bottom:40px;
+  color:#555;
+}
+
+.contact-info{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+  font-size:14px;
+}
+.contact-info strong{
+  display:block;
+  margin-bottom:6px;
+}
+.contact-info a{
+  color:#000;
+  text-decoration:none;
+}
+
+/* FORM */
+.contact-form{
+  max-width:420px;
+}
+.contact-form label{
+  font-size:12px;
+  display:block;
+  margin-top:20px;
+  color:#555;
+}
+.contact-form input,
+.contact-form textarea{
+  width:100%;
+  border:none;
+  border-bottom:1px solid #ccc;
+  padding:10px 0;
+  font-size:14px;
+  outline:none;
+}
+.contact-form textarea{
+  resize:none;
+  height:80px;
+}
+
+.form-check{
+  display:flex;
+  align-items:flex-start;
+  gap:8px;
+  font-size:12px;
+  margin:25px 0;
+  color:#555;
+}
+
+.submit-btn{
+  width:100%;
+  background:#111;
+  color:#fff;
+  padding:14px;
+  border:none;
+  cursor:pointer;
+  font-size:13px;
+  letter-spacing:1px;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .contact-wrapper{
+    grid-template-columns:1fr;
+    padding:60px 20px;
+  }
+  .contact-left h1{
+    font-size:42px;
+  }
+  .contact-info{
+    grid-template-columns:1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER LOAD -->
+<div id="header"></div>
+<script>
+fetch("header.html")
+.then(r=>r.text())
+.then(d=>document.getElementById("header").innerHTML=d)
+.catch(()=>{
+ document.getElementById("header").innerHTML =
+ "<div style='background:#0d47a1;color:#fff;padding:16px;text-align:center;font-weight:bold'>Bhumi Marketing</div>";
+});
+</script>
+
+<!-- CONTACT SECTION -->
+<section class="contact-wrapper">
+
+  <!-- LEFT -->
+  <div class="contact-left">
+    <h1>Send a <span>message.</span></h1>
+    <p>We’re here to answer any question you may have.</p>
+
+    <div class="contact-info">
+      <div>
+        <strong>Careers</strong>
+        +91 98877 00059
+      </div>
+      <div>
+        <strong>Feedbacks</strong>
+        bhumimarketing.info.gov@gmail.com<br>
+        Jaipur, Rajasthan
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT FORM -->
+  <div class="contact-form">
+    <form onsubmit="sendMsg();return false;">
+
+      <label>Full Name</label>
+      <input type="text" id="name" required>
+
+      <label>Company Name</label>
+      <input type="text" id="company">
+
+      <label>Email Address</label>
+      <input type="email" id="email" required>
+
+      <label>Mobile</label>
+      <input type="tel" id="mobile" required>
+
+      <label>Your Message</label>
+      <textarea id="message"></textarea>
+
+      <div class="form-check">
+        <input type="checkbox" checked>
+        <span>Opt in for weekly alerts via SMS, WhatsApp, RCS & Email.</span>
+      </div>
+
+      <button class="submit-btn">SUBMIT</button>
+
+    </form>
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer style="text-align:center;padding:15px;background:#111;color:#fff;font-size:13px">
+© 2025 Bhumi Marketing | All Rights Reserved
+</footer>
+
+<!-- COMMON WHATSAPP CHATBOT LOAD -->
+<div id="chatbot"></div>
+<script>
+fetch("chatbot.html")
+.then(r => r.text())
+.then(d => document.getElementById("chatbot").innerHTML = d);
+</script>
+
+<script>
+function sendMsg(){
+  let text =
+  "New Enquiry - Bhumi Marketing\n\n"+
+  "Name: "+name.value+"\n"+
+  "Company: "+company.value+"\n"+
+  "Email: "+email.value+"\n"+
+  "Mobile: "+mobile.value+"\n"+
+  "Message: "+message.value;
+
+  window.open(
+    "https://wa.me/919887700059?text="+encodeURIComponent(text),
+    "_blank"
+  );
+}
+</script>
+
+</body>
+</html>
